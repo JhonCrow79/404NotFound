@@ -3,24 +3,46 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    .Div {
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
       display: flex;
-      justify-content: left;
-      align-items: center;
-
+      flex-direction: column;
+      font-family: 'Space Mono', monospace;
     }
 
-    .Div2 {
-      text-align: left;
-
+    .div-2 {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 10px;
     }
 
-    .images {
-      width: 30%;
+    .image {
+      width: 50%;
+      align-self: center;
+    }
+
+    .info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    @media (max-width: 375px) {
+      .div-2 {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
   <title>404 Not Found</title>
@@ -30,17 +52,15 @@
 
 <body>
   <h3>404 not Found</h3>
-  <div class="Div">
-    <img class="images" src="Images/Scarecrow.png" alt="">
 
-    <div class="Div2">
+  <div class="div-2">
+    <img class="image" src="scarecrow.png" alt="">
+    <div class="info">
       <h1>I have bad news for you</h1>
       <p>The page you are looking for might be removed or is temporarily unavailable.</p>
       <button style="background-color: black; color: white;">BACK TO HOWEPAGE</button>
     </div>
   </div>
-
-
 
 
 </body>
